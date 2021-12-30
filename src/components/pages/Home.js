@@ -6,6 +6,11 @@ import Slide from '../compo/Slide';
 import items from './AllData';
 import ButtonFilter from '../compo/ButtonFilter';
 import { useState } from 'react';
+import TabComponent from '../compo/TabComponent'
+import SearchRegion from '../compo/SearchRegion';
+
+
+
 const allCategories = ['All', ...new Set(items.map(item => item.category))];
 
 
@@ -31,6 +36,8 @@ export default function Home() {
       <Upcoming/>
       <ButtonFilter button={buttons} filter={filter} />
       <Slide menuItem={menuItem}/>
+      <SearchRegion />
+      <TabComponent/>
     </>
   );
 }
