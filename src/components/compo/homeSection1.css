@@ -1,0 +1,13 @@
+.section1 {
+
+height: 60vh;
+display: block;
+border: 1px solid rgb(223, 223, 223);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-image: url('../../images/back.png');
+padding-top: 8%;
+font-size: 0.8rem;
+text-align: center;
+}
