@@ -64,6 +64,13 @@
   display: none;
 }
 
+.navbar img{
+   padding-top: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;

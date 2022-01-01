@@ -4,6 +4,9 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import './TabComponent.css';
+import ResponsiveGrid from "../compo/Grid";
+
+
 function TabPanel({ children, value, index, ...other }) {
   return (
     <div role="tabpanel" hidden={value !== index} {...other}>
@@ -34,25 +37,26 @@ export default function TabComponent() {
     {
       label: "Marrakech-Essaouira",
       description: "Abo Kssrioui"
-    }
+    },
+   
   ];
 
   return (
     <div className="tab">
-<Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+<Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
         <Tabs
           value={currentTab}
           onChange={handleChange}
           aria-label="simple tabs example"
-        >
+          centered>
           {fetchedCategories.map((category) => (
             <Tab key={category.label} label={category.label} />
           ))}
         </Tabs>
         </Box>
       {fetchedCategories.map((category, index) => (
-        <TabPanel key={category.label} value={currentTab} index={index}>
-          {category.description}
+        <TabPanel key={category.label} value={currentTab} index={index} className="tabNa">
+          <ResponsiveGrid data={category.description} />
         </TabPanel>
       ))}
     </div>
