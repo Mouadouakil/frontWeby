@@ -2,31 +2,31 @@ import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Dropdown from './Dropdown';
+// import Dropdown from './Dropdown';
 import Logo from '../images/PROJET_CdeV_logo.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  // const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
-  };
+  // const onMouseEnter = () => {
+  //   if (window.innerWidth < 960) {
+  //     setDropdown(false);
+  //   } else {
+  //     setDropdown(true);
+  //   }
+  // };
 
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
+  // const onMouseLeave = () => {
+  //   if (window.innerWidth < 960) {
+  //     setDropdown(false);
+  //   } else {
+  //     setDropdown(false);
+  //   }
+  // };
 
   return (
     <>
@@ -43,27 +43,27 @@ function Navbar() {
               Home
             </Link>
           </li>
-          <li
+          {/* <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-          >
-            <Link
+          > */}
+            {/* <Link
               to='/services'
               className='nav-links'
               onClick={closeMobileMenu}
             >
               Services <i className='fas fa-caret-down' />
             </Link>
-            {dropdown && <Dropdown />}
-          </li>
+            {dropdown && <Dropdown />} */}
+          {/* </li> */}
           <li className='nav-item'>
             <Link
               to='/products'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Products
+              About
             </Link>
           </li>
           <li className='nav-item'>

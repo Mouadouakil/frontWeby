@@ -8,7 +8,7 @@ import ButtonFilter from '../compo/ButtonFilter';
 import { useState } from 'react';
 import TabComponent from '../compo/TabComponent'
 import SearchRegion from '../compo/SearchRegion';
-
+import Footer from '../compo/Footer';
 
 
 const allCategories = ['All', ...new Set(items.map(item => item.category))];
@@ -38,6 +38,7 @@ export default function Home() {
       <Slide menuItem={menuItem}/>
       <SearchRegion />
       <TabComponent/>
+      <Footer/>
     </>
   );
 }
