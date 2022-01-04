@@ -2,7 +2,7 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { FaCalendarCheck, FaGoogle } from 'react-icons/fa';
+import { FaCalendarCheck } from 'react-icons/fa';
 import './Slide.css'
 
 function Slide({ menuItem }) {

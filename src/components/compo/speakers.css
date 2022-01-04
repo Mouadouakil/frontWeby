@@ -1,0 +1,38 @@
+.speakers{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    height: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.speakers-section{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-img{
+  display: flex;
+justify-content: center;
+}
+
+.speaker-img img {
+    height: 100px;
+    width: 100px;
+   
+    border-radius: 50%;
+}
+
+.speaker-text{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
