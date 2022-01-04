@@ -22,7 +22,7 @@
   }
 
   .slide-item{
-    height: 300px;
+    height: 350px;
     width: 150px;
     text-align: center;
     
@@ -47,7 +47,7 @@
     margin-top: 20px;
   }
   .slide-item p{
-    font-size: 8px;
+    font-size: 10px;
     margin-top: 20px;
   }
 
@@ -65,5 +65,16 @@
     align-items: center;
     height: 50%;
     width: 100%;
+    
+  }
+  .slide-container-item{
+      height: 90%;
+      width: 100%;
+
+  }
+  .card-icons{
+    font-size: small;
+    width: 100%;
+    
     
   }
