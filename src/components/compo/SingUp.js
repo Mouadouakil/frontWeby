@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <Auth.UserContextProvider supabaseClient={supabase}>
       <Container supabaseClient={supabase}>
-        <Auth supabaseClient={supabase}  />
+        <Auth  providers={['google','github','facebook']} supabaseClient={supabase}  />
       </Container>
     </Auth.UserContextProvider>
   );
