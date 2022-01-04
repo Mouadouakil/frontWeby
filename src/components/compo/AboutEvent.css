@@ -1,0 +1,20 @@
+.aboutEvent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(241, 241, 241, 0.568);
+    align-items: center;
+}
+
+.aboutEvent h1{
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.aboutEvent p{
+    width: 80%;
+    padding:30px;
+    line-height: 1.5;
+}
