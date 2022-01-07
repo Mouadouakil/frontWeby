@@ -1,0 +1,16 @@
+.container{
+    width: 80%;
+    margin-top: 50px;
+}
+
+.container th {
+    padding : 20px;
+    width: 20%;
+    border: 1px solid goldenrod;
+}
+
+.container td {
+    padding : 20px;
+    width: 20%;
+    border: 1px solid rgb(187, 32, 218);
+}
