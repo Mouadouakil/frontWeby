@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaCalendarCheck } from 'react-icons/fa';
 import './Slide.css'
+import { Link } from 'react-router-dom';
+
 
 function Slide({ menuItem }) {
   var settings = {
@@ -40,15 +42,28 @@ function Slide({ menuItem }) {
       }
     ]
   };
+
+ 
+
+
+
+console.log(menuItem)
+
+
+
+
+
   return (
+
+    
     <div className='slides'>
       <Slider {...settings}  >
         {menuItem.map((item) => {
           return <div className='slide-item' key={item.id}>
             <div className='slide-card'>
               <div className="slide-container-item">
-                <div className='img-section-container'><div className='img-section' style={{ backgroundImage: `url(${item.image})` }}></div> </div>
-                <a href="/"><h2>{item.title}</h2></a>
+                <div className='img-section-container'><div className='img-section' style={{ backgroundImage: `url(${item.picture})` }}></div> </div>
+                <Link to={`/event/${item.id}`} key={item.id}><h2>{item.title}</h2></Link>
                 <p>{item.description}</p>
 
               </div>

@@ -1,37 +1,57 @@
-import React from 'react';
+import React, {useState } from 'react';
 import '../../App.css';
 import HomeSection1 from '../compo/HomeSection1';
 import Upcoming from '../compo/Upcoming';
 import Slide from '../compo/Slide';
-import items from './AllData';
+import axios from "axios";
 import ButtonFilter from '../compo/ButtonFilter';
-import { useState } from 'react';
 import TabComponent from '../compo/TabComponent'
 import SearchRegion from '../compo/SearchRegion';
 import Footer from '../compo/Footer';
 
 
-const allCategories = ['All', ...new Set(items.map(item => item.category))];
+
 
 
 export default function Home() {
-  const [menuItem, setMenuItem] = useState(items);
+  
+
+
+  const baseURL = "http://localhost:5030/Events";
+  const [menuItem, setMenuItem] = React.useState(null);
+  const allCategories = ['All', 1 , 2 , 3];
   const [buttons, setButtons] = useState(allCategories);
+  
+  
+  
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setMenuItem(response.data);
+    });
+  }, []);
+
+  if (!menuItem) return null;
+  
+  const items=menuItem;
+
+  console.error(items);
+
   const filter = (button) =>{
 
     if(button === 'All'){
       setMenuItem(items);
       return;
     }
-
-    const filteredData = items.filter(item => item.category ===  button);
+    else{
+      
+    }
+    const filteredData = menuItem.filter(item => item.categorie ===  button);
     setMenuItem(filteredData)
   }
 
 
   return (
     <>
-      
       <HomeSection1/>
       <Upcoming/>
       <ButtonFilter button={buttons} filter={filter} />

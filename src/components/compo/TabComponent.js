@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import './TabComponent.css';
 import ResponsiveGrid from "../compo/Grid";
-
+import axios from "axios";
 
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -20,26 +20,34 @@ function TabPanel({ children, value, index, ...other }) {
 }
 
 export default function TabComponent() {
+  const baseURL = "http://localhost:5030/Events";
   const [currentTab, setCurrentTab] = React.useState(0);
-
+  const [data, setData] = React.useState(null);
   const handleChange = (event, newTab) => {
     setCurrentTab(newTab);
   };
   const fetchedCategories = [
     {
       label: "Tanger-Tetouan",
-      description: "Ali Ouahli"
     },
     {
       label: "Rabat-Casablanca",
-      description: "Mouad Ouakil"
+      
     },
     {
       label: "Marrakech-Essaouira",
-      description: "Abo Kssrioui"
     },
    
   ];
+  
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setData(response.data);
+    });
+  }, []);
+
+  if (!data) return null;
+
 
   return (
     <div className="tab">
@@ -56,7 +64,7 @@ export default function TabComponent() {
         </Box>
       {fetchedCategories.map((category, index) => (
         <TabPanel key={category.label} value={currentTab} index={index} className="tabNa">
-          <ResponsiveGrid data={category.description} />
+          <ResponsiveGrid data={data} />
         </TabPanel>
       ))}
     </div>
