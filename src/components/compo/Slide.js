@@ -12,9 +12,9 @@ function Slide({ menuItem }) {
     arrows: true,
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,

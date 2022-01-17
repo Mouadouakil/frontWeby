@@ -8,7 +8,7 @@ function AboutCompo() {
     return (
 
         <div className='speakers'>
-            <h1>______________________________________________________________</h1>
+           
             
             <div className='speakers-section'>
             <Box sx={{ flexGrow: 5 }}>
@@ -63,7 +63,6 @@ function AboutCompo() {
     </Box>
     
     </div>
-    <h1>______________________________________________________________</h1>
         </div>
     )
 }

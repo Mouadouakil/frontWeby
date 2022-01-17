@@ -19,41 +19,45 @@ export default function Home() {
 
   const baseURL = "http://localhost:5030/Events";
   const [menuItem, setMenuItem] = React.useState(null);
-  const allCategories = ['Management', 'IT' , 'Sciences' , 'Politique'];
+  const [Item, setItem] = React.useState(null);
+  const allCategories = ['All','Management', 'IT' , 'Sciences' , 'Politique'];
   const [buttons, setButtons] = useState(allCategories);
-  
-  
+
   
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
       setMenuItem(response.data);
+      setItem(response.data);
     });
   }, []);
 
   if (!menuItem) return null;
-  
+  if (!Item) return null;
 
 
   const filter = (button) =>{
+    var filteredData = null;
+
+    if(button === 'All'){
+      filteredData = menuItem.filter(item => item.categorie ===  1 || item.categorie ===  2 || item.categorie ===  3 );
+    }
+
    if(button === 'IT'){
-      button = 2 
+     filteredData = menuItem.filter(item => item.categorie ===  1);
     }
     if(button === 'Management'){
-      button = 1
-      return;
+     filteredData = menuItem.filter(item => item.categorie ===  2);
     }
     if(button === 'Sciences'){
-      button = 3
-      return;
+     filteredData = menuItem.filter(item => item.categorie ===  3);
     }
     if(button === 'Politique'){
-      button = 1
-      return;
+     filteredData = menuItem.filter(item => item.categorie ===  1);
     }
     
     
-    const filteredData = menuItem.filter(item => item.categorie ===  button);
-    setMenuItem(filteredData)
+    
+    setItem(filteredData)
   }
 
 
@@ -62,7 +66,7 @@ export default function Home() {
       <HomeSection1/>
       <Upcoming/>
       <ButtonFilter button={buttons} filter={filter} />
-      <Slide menuItem={menuItem}/>
+      <Slide menuItem={Item}/>
       <SearchRegion />
       <TabComponent/>
       <Footer/>

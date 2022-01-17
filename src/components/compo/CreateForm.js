@@ -42,7 +42,7 @@ function CreateForm() {
         </label>
         
         <label>
-         <h2> Category:</h2>
+         <h2> Categorie:</h2>
           <select
             name="category"
             value={category}
@@ -67,10 +67,11 @@ function CreateForm() {
 
         </label>     
         <label>
-         <h2> Image: </h2> 
+         <h2> Lien Image: </h2> 
           <input
             name="image"
-            type="file"
+            type="url"
+
             // value={date}
             // onChange={e => setDate(e.target.value)}
             required />
