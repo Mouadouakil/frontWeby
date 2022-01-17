@@ -3,14 +3,15 @@ import './AboutEvent.css';
 function aboutEvent({data}) {
     return (
         <div className='aboutEvent'>
-            <h1>About this event</h1>
+            <h1>Description</h1>
             <p> 
             {data.description}
-
+            Panoplie d’engagement diversifiée
+            Partagez votre caméra, créez des sondages et des enquêtes, posez et répondez aux questions en direct ou dessinez directement sur l'écran.
+            Un logiciel de webinaires facile à configurer
+La plate-forme de conférences virtuelles GoToWebinar offre des modes de webinaires polyvalents, des fonctionnalités interactives, des outils d’analyse pointus, des intégrations performantes et plus encore.
             </p>
-            <p><h3>Join us!
-            As an attendee
-                You must RSVP in this event, and get a ticket in our Eventbrite page.</h3></p>
+            <p><h3>Vous pouvez joindre vos supports à l'avance ou les distribuer en direct pendant le webinaire.</h3></p>
 
 
         </div>

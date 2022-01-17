@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 export default function ImgMediaCard({data}) {
   return (
     <Card sx={{ maxWidth: 500 }}>
@@ -18,13 +19,13 @@ export default function ImgMediaCard({data}) {
       <CardContent>
       
         <Typography variant="body2" color="text.secondary">
-          <h1>{data.title}</h1>
-          <h3>{data.description}</h3>
+          <h2>{data.title}</h2><br></br>
+          <h5>{data.description} Panoplie d’engagement diversifiée
+            Partagez votre caméra, créez des sondages et des enquêtes, posez et répondez aux questions en direct ou dessinez </h5>
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="large"><a href={data.link}>Le ien de Webinair</a></Button>
+        <Button size="small"><h3><Link to={data.link} style={{ textDecoration: 'none' }}>Lien Direct</Link></h3></Button>
       </CardActions>
     </Card>
   );

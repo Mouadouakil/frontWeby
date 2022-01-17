@@ -5,7 +5,7 @@
     padding-left: 25px;
     padding-right: 25px;
     margin-bottom: 100px;
-    
+    padding-bottom: 25px;
   }
 
   .slick-prev {
@@ -22,7 +22,7 @@
   }
 
   .slide-item{
-    height: 350px;
+    height: 400px;
     width: 150px;
     text-align: center;
     
@@ -36,8 +36,9 @@
       height: 100%;
       width: 100%;
       padding: 10px;
-      border: 1px solid rgba(179, 179, 179, 0.575);
-    
+      border-radius: 10px;
+      border: 3px solid rgba(81, 56, 170, 0.637);
+      background-color: rgba(255, 255, 255, 0.13);
   }
 
   
@@ -47,7 +48,7 @@
     margin-top: 20px;
   }
   .slide-item p{
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 20px;
   }
 

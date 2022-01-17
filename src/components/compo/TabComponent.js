@@ -28,14 +28,14 @@ export default function TabComponent() {
   };
   const fetchedCategories = [
     {
-      label: "Tanger-Tetouan",
+      label: "Prochain",
     },
     {
-      label: "Rabat-Casablanca",
+      label: "récent",
       
     },
     {
-      label: "Marrakech-Essaouira",
+      label: "Aujourd'hui",
     },
    
   ];

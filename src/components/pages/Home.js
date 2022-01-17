@@ -19,7 +19,7 @@ export default function Home() {
 
   const baseURL = "http://localhost:5030/Events";
   const [menuItem, setMenuItem] = React.useState(null);
-  const allCategories = ['All', 1 , 2 , 3];
+  const allCategories = ['Management', 'IT' , 'Sciences' , 'Politique'];
   const [buttons, setButtons] = useState(allCategories);
   
   
@@ -32,19 +32,26 @@ export default function Home() {
 
   if (!menuItem) return null;
   
-  const items=menuItem;
 
-  console.error(items);
 
   const filter = (button) =>{
-
-    if(button === 'All'){
-      setMenuItem(items);
+   if(button === 'IT'){
+      button = 2 
+    }
+    if(button === 'Management'){
+      button = 1
       return;
     }
-    else{
-      
+    if(button === 'Sciences'){
+      button = 3
+      return;
     }
+    if(button === 'Politique'){
+      button = 1
+      return;
+    }
+    
+    
     const filteredData = menuItem.filter(item => item.categorie ===  button);
     setMenuItem(filteredData)
   }

@@ -21,27 +21,32 @@ const Footer = () => {
       </h1>
       <Container>
         <Row>
-          <Column>
-            <Heading>About Us</Heading>
-            <FooterLink href="#">Mouad Ouakil</FooterLink>
-            <FooterLink href="#">Asmaa Amara</FooterLink>
-            <FooterLink href="#">Ali Ouahli</FooterLink>
-            <FooterLink href="#">Abo Kssrioui</FooterLink>
+    
+        <Column>
+            <Heading>Services</Heading>
+            <FooterLink href="#">Evenements</FooterLink>
+            <FooterLink href="#">Management</FooterLink>
+            <FooterLink href="#">IT & Tech </FooterLink>
+            <FooterLink href="#">Finance</FooterLink>
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Home</FooterLink>
-            <FooterLink href="#">About</FooterLink>
-            <FooterLink href="#">Upcoming</FooterLink>
-            <FooterLink href="#">Policy</FooterLink>
+            <FooterLink href="#">Mouad Ouakil</FooterLink>
+            <FooterLink href="#">Asmaa Amara</FooterLink>
+            <FooterLink href="#">Ali Ouahli</FooterLink>
+            <FooterLink href="#">Aboubakr kassrioui</FooterLink>
           </Column>
+
+
+
           <Column>
-            <Heading>Contact Us</Heading>
-            <FooterLink href="#">IT & Tech</FooterLink>
-            <FooterLink href="#">Health</FooterLink>
-            <FooterLink href="#">Management</FooterLink>
-            <FooterLink href="#">Finance</FooterLink>
+            <Heading>Services</Heading>
+            <FooterLink href="#">Acceuil</FooterLink>
+            <FooterLink href="#">Contact</FooterLink>
+            <FooterLink href="#">Github</FooterLink>
+            <FooterLink href="#">SignUP</FooterLink>
           </Column>
+       
           <Column>
             <Heading>Social Media</Heading>
             <FooterLink href="#">

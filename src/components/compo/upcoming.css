@@ -1,7 +1,8 @@
 .upcoming{
-    height: 120px;
+    height: 300px;
     width: 100%;
     justify-content: center;
     text-align: center;
     padding-top: 60px;
+    background-image: url('../../images/d.PNG');
 }

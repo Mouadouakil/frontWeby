@@ -1,8 +1,9 @@
 .search{
-
-    height: 110px;
+    background-image: url('../../images/f.PNG');
+    height: 550px;
     width : 100%;
     justify-content: center;
+    background-repeat: no-repeat;
    text-align: center;
-   
+    
 }

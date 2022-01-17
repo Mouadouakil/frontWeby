@@ -1,14 +1,20 @@
 .section1 {
 
-height: 350px;
+height: 450px;
 display: block;
-border: 1px solid rgb(223, 223, 223);
-background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-background-image: url('../../images/background.png');
+background-image: url('../../images/background.PNG');
 padding-top: 8%;
 object-fit: contain;
 font-size: 0.8rem;
 text-align: center;
+}
+
+
+.section1 h1 {
+
+    font-size: 40px;
+    color: rgb(134, 73, 54);
+
 }

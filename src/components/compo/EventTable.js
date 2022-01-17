@@ -34,20 +34,20 @@ function EventTable() {
           <table class="table border shadow">
             <thead class="thead-dark">
               <tr>
-                <th scope="col">Nom D'evenemtn</th>
+                <th scope="col">Titre</th>
                 <th scope="col">Date</th>
-                <th scope="col">Speaker</th>
-                <th scope="col">category</th>
-                <th>Action</th>
+                <th scope="col">Categorie</th>
+                <th scope="col">Lien</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               {/* {users.map((user, index) => ( */}
                 <tr>
-                  <td>Nom devent</td>
+                  <td>Evenetment 1 </td>
                   <td>18 juillet 2022</td>
-                  <td>Event</td>
-                  <td>Hello Mouad</td>
+                  <td>IT & TECH</td>
+                  <td>www.zoom.com?ksjd-lqsjd-dlfd</td>
                   <td>
                     {/* <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}> */}
                       
@@ -56,13 +56,36 @@ function EventTable() {
                       class="btn btn-outline-primary mr-2"
                     //   to={`/users/edit/${user.id}`}
                     >
-                      Edit
+                      Accepte
                     </Link>
                     <Link
                       class="btn btn-danger"
                     //   onClick={() => deleteUser(user.id)}
                     >
-                      Delete
+                      Refuse
+                    </Link>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Evenement 2</td>
+                  <td>19 juillet 2022</td>
+                  <td>Managment</td>
+                  <td>www.GoogleMeet.com?ksjd-lqsjd-dlfd</td>
+                  <td>
+                    {/* <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}> */}
+                      
+                    {/* </Link> */}
+                    <Link
+                      class="btn btn-outline-primary mr-2"
+                    //   to={`/users/edit/${user.id}`}
+                    >
+                      Accepte
+                    </Link>
+                    <Link
+                      class="btn btn-danger"
+                    //   onClick={() => deleteUser(user.id)}
+                    >
+                      Refuse
                     </Link>
                   </td>
                 </tr>
