@@ -1,42 +1,86 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import './consulting.css'
+import './consulting.css';
+import axios from 'axios';
+
+
 export default function Consulting() {
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(watch("example")); // watch input value by passing the name of it
+  const onSubmit = data => envoyer(data);
+  const baseURL = "http://localhost:5030/Events";
+
+  watch("event")
+
+  function  envoyer(data) {
+    console.log(data);
+    axios.post(baseURL, {
+    title : data.event,
+    description : data.description,
+    link : data.Lien,
+    categorie : data.categorie,
+    datevent : data.date,
+    picture : data.picture})
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+
+
+
+
+      console.log(data.exampleRequired)
+
+  }
+
+
 
   return (
 
 
     
     <>
+
+      
+
+
         <form onSubmit={handleSubmit(onSubmit)}>
      
 
-      <label>Nom D'utilisateur</label>
-      <input  {...register("example")} className='inpu'/>
-      
+        <h1>  Ajouter Votre Evenement : </h1>
+        <br></br>
+        <br></br>
+        <br></br>
       <label>Email</label>
-      <input {...register("exampleRequired", { required: true })} className='inpu' type="Email"/>
+      <input {...register("email", { required: true })} className='inpu' type="Email"/>
 
       <label>Nom D'Evenement</label>
-      <input {...register("Nomevent", { required: true })} className='inpu'/>
+      <input {...register("event", { required: true })} className='inpu'/>
 
-      <label>Description</label>
-      <input {...register("descrittipon", { required: true })} className='inpu' type="textarea"/>
+      <label>description</label>
+      <input {...register("description", { required: true })} className='desc' type="textarea"/>
 
       <label>Nom de Conferencier</label>
-      <input {...register("conferencier", { required: true })} className='inpu' />
+      <input {...register("speaker", { required: true })} className='inpu' />
       
       <label>Date</label>
-      <input {...register("Date", { required: true })} className='inpu' type="Date"/>
+      <input {...register("date", { required: true })} className='inpu' type="Date"/>
 
       <label>Lien  GoogleMeet ou Zoom Par exemple</label>
       <input {...register("Lien", { required: true })} className='inpu'/>
 
-      <label>Lien D'image</label>
+      <label>Categorie</label>
+      <select {...register("categorie")} className='inpu'>
+        <option value="1">IT</option>
+        <option value="2">Management</option>
+        <option value="3">sciences</option>
+        <option value="1">Politique</option>
+      </select>
+
+      <label>Lien D'image <h6>utiliser ce <a href='https://imgbb.com/'>lien</a> pour creer  un lien pour l'image  </h6></label>
       <input {...register("picture", { required: true })} className='inpu'/>
 
       {errors.exampleRequired && <span>This field is required</span>}

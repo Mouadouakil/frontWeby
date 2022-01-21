@@ -51,7 +51,7 @@ function CreateForm() {
             <option key=""></option>
             {/* {countries.map(country => ( */}
               <option key="IT">IT</option>
-              <option key="IT">Data</option>
+              <option key="Data">Data</option>
             {/* // ))} */}
           </select>
         </label>

@@ -56,13 +56,24 @@ form {
     font-weight: bold;
   }
   
+  .desc{
+
+    height: 150px;
+    margin-top: 10px;
+    padding : 10px;
+    font-weight: bold;
+
+
+  }
+
+
  label {
     line-height: 2;
     text-align: left;
     display: block;
     margin-top: 10px;
     color: rgb(24, 18, 18);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
   }
   

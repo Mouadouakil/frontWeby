@@ -3,14 +3,19 @@
     margin-top: 50px;
 }
 
+
+.container table {
+
+    border-collapse: collapse;
+}
 .container th {
     padding : 20px;
     width: 20%;
-    border: 1px solid goldenrod;
+    border: 4px solid goldenrod;
 }
 
 .container td {
     padding : 20px;
     width: 20%;
-    border: 1px solid rgb(187, 32, 218);
+    border: 4px solid rgb(187, 32, 218);
 }
