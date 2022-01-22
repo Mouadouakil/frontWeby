@@ -23,20 +23,55 @@ export default function TabComponent() {
   const baseURL = "http://localhost:5030/Events";
   const [currentTab, setCurrentTab] = React.useState(0);
   const [data, setData] = React.useState(null);
+  const [def, setDef] = React.useState(null);
+  let result = data;
+  
   const handleChange = (event, newTab) => {
     setCurrentTab(newTab);
+    console.log(newTab);
+    console.log(def);
+  
+    console.log(data);
+    if(newTab === 2){
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+    }else{
+      setData(def);
+    }
+  
+   
+
   };
   const fetchedCategories = [
     {
-      label: "Prochain",
+      label: "Developpement",
     },
     {
-      label: "récent",
-      
+      label: "Data",
     },
     {
-      label: "Aujourd'hui",
+      label: "AI",
     },
+    {
+      label: "Devops",
+    },
+    {
+      label: "Design",
+    },
+    {
+      label: "UI/UX",
+    },
+    {
+      label: "Security",
+    },
+    {
+      label: "MLops",
+    },
+    {
+      label: "Cloud",
+    },
+    
    
   ];
   
@@ -44,9 +79,15 @@ export default function TabComponent() {
     axios.get(baseURL).then((response) => {
       setData(response.data);
     });
+    axios.get(baseURL).then((response) => {
+      setDef(response.data);
+    });
   }, []);
 
   if (!data) return null;
+
+  if (!def) return null;
+
 
 
   return (
@@ -60,13 +101,19 @@ export default function TabComponent() {
           {fetchedCategories.map((category) => (
             <Tab key={category.label} label={category.label} />
           ))}
+          
         </Tabs>
+        
         </Box>
+        
       {fetchedCategories.map((category, index) => (
         <TabPanel key={category.label} value={currentTab} index={index} className="tabNa">
-          <ResponsiveGrid data={data} />
+          <ResponsiveGrid data={data} /> 
         </TabPanel>
       ))}
+
+
+      
     </div>
   );
 }

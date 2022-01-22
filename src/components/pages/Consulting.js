@@ -66,7 +66,7 @@ export default function Consulting() {
       <label>Nom de Conferencier</label>
       <input {...register("speaker", { required: true })} className='inpu' />
       
-      <label>Date</label>
+      <label>Ville, Region , Date</label>
       <input {...register("date", { required: true })} className='inpu' type="Date"/>
 
       <label>Lien  GoogleMeet ou Zoom Par exemple</label>
