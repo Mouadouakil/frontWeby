@@ -29,9 +29,10 @@ export default function Event() {
     <>
       
       {event.map((event) => ( <EventComp data={event}/>))}    
-      <RSVP/>
-
-      <Speakers/>
+        
+      {event.map((event) => ( <RSVP data={event}/>))}  
+      {event.map((event) => ( <Speakers data={event}/>))}  
+      
       {event.map((event) => ( <AboutEvent data={event}/>))}   
       
       <Footer/>

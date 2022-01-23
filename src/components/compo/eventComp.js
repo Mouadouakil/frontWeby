@@ -10,13 +10,13 @@ function EventComp({data}) {
     return (
         
         <div className='eventSection1'>
-                <h1>{data.title}</h1>
+                <h1 style={{textDecoration: 'underline'}}>{data.title}</h1>
                 <br
                 ></br>
-                <h2>Event Virtual en Google Meet</h2>
+                <h2>{data.description}</h2>
                 <br
                 ></br>
-                <h3>University de Tanger</h3>
+                
                 <br
                 ></br>
                 <h4>{data.datevent}</h4>
@@ -28,11 +28,28 @@ function EventComp({data}) {
                 ></br>
 
 
-<h2>Categories : IT & Tech</h2>
+
+        {data.categorie === 2 &&
+            
+            <h2>Categorie : Management</h2>
+            
+          }
+           {data.categorie === 1 &&
+            
+            <h2>Categorie : IT & Tech</h2>
+            
+          }
+           {data.categorie === 3 &&
+            
+            <h2>Categorie : Politique</h2>
+            
+          }
+    
+    
+    
 
 <br
                 ></br>
-<h1><button className='btn2'> <a href={data.link}>Link </a></button></h1>
         
         
         </div>

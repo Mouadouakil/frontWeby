@@ -94,7 +94,7 @@ function EventTable() {
           </table>
         </div>
 
-        <br></br>
+        {/* <br></br>
         <br></br>
         <h1>Speakers : </h1>
         <br></br>
@@ -109,7 +109,9 @@ function EventTable() {
              <tr>
                <th scope="col">Nom</th>
                <th scope="col">email</th>
-    
+               <th scope="col">Categorie</th>
+               <th scope="col">Lien</th>
+               <th scope="col">Action</th>
              </tr>
            </thead>
            <tbody>
@@ -131,7 +133,7 @@ function EventTable() {
            
            </tbody>
          </table>
-       </div>
+       </div> */}
 
 
       </div>

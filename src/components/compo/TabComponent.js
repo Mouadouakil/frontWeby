@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import './TabComponent.css';
 import ResponsiveGrid from "../compo/Grid";
 import axios from "axios";
-
+import Card from "./Card.js"
 function TabPanel({ children, value, index, ...other }) {
   return (
     <div role="tabpanel" hidden={value !== index} {...other}>
@@ -20,6 +20,7 @@ function TabPanel({ children, value, index, ...other }) {
 }
 
 export default function TabComponent() {
+  const [query, setQuery] = React.useState(null);
   const baseURL = "http://localhost:5030/Events";
   const [currentTab, setCurrentTab] = React.useState(0);
   const [data, setData] = React.useState(null);
@@ -92,6 +93,27 @@ export default function TabComponent() {
 
   return (
     <div className="tab">
+
+     <div className="s">  <h1>Recherche des Evenements:</h1> <br></br> <br></br> <input placeholder="Chercher Par titre " className="search-bar" onChange={event => setQuery(event.target.value)} />
+       <br></br>
+       <br></br>
+       <br></br></div>
+
+  {data.filter(post => {
+    if (query === '') {
+      return null;
+    } else if (post.title.includes(query)) {
+      return post;
+    }
+  }).map((post, index) => (
+    <div className="box2" key={index}>
+     <Card data={post} />
+     <br></br>
+    </div>
+  ))}
+
+
+
 <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
         <Tabs
           value={currentTab}

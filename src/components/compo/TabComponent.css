@@ -10,3 +10,27 @@
 padding: 150px;
 padding-top: 50px;
 }
+
+.search-bar{
+    height: 50px;
+    width: 300px;
+    align-self: center;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.box2 {
+   
+    display: flex;
+    flex-direction: row;
+
+}
+
+.s{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

@@ -25,7 +25,7 @@ export default function ImgMediaCard({data}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"><h3><Link to={data.link} style={{ textDecoration: 'none' }}>Lien Direct</Link></h3></Button>
+        <Button size="small"><h3><Link to={`/event/${data.id}`} key={data.id} style={{ textDecoration: 'none' }}>Voir Plus</Link></h3></Button>
       </CardActions>
     </Card>
   );
