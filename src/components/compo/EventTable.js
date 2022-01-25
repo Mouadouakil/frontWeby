@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import './EventTable.css'
 import axios from "axios";
-
+import {FaListUl} from 'react-icons/fa';
 function EventTable() {
 
   
@@ -45,7 +45,7 @@ function EventTable() {
       
 <br></br>
         <br></br>
-        <h1>Evenements Non Approvées : </h1>
+        <h1><FaListUl/> Evenements Non Approvées : </h1>
         <br></br>
         <br></br>
 

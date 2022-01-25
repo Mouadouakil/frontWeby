@@ -1,22 +1,43 @@
 import React from 'react'
 import './createForm.css'
+import axios from 'axios';
+
 function CreateForm() {
     const [titre, setTitre] = React.useState("");
     const [desc, setDesc] = React.useState("");
     const [category, setCategory] = React.useState("");
     const [date, setDate] = React.useState("");
-    // const [acceptedTerms, setAcceptedTerms] = React.useState(false);
-  
+    const [link, setLink] = React.useState("");
+    const [picture, setPicture] = React.useState("");
+    const baseURL = "http://localhost:5030/Events";
+    const data = {
+      title: titre,
+      description : desc,
+      link: link,
+      categorie:category,
+      datevent:date,
+      picture : picture ,
+      }
     const handleSubmit = (event) => {
-      console.log(`
-        titre: ${titre}
-        desc: ${desc}
-        date: ${date}
-      `);
-      
+     console.log(data);
+      axios.post(baseURL, {
+        title : data.title,
+        description : data.description,
+        link : data.link,
+        categorie : data.categorie,
+        datevent : data.datevent,
+        picture : data.picture})
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
       event.preventDefault();
     }
-  // Accepted Terms: ${acceptedTerms}
+ 
     return (
       <form onSubmit={handleSubmit} className='createForm'>
       
@@ -45,14 +66,13 @@ function CreateForm() {
          <h2> Categorie:</h2>
           <select
             name="category"
-            value={category}
+            
             onChange={e => setCategory(e.target.value)}
             required>
-            <option key=""></option>
-            {/* {countries.map(country => ( */}
-              <option key="IT">IT</option>
-              <option key="Data">Data</option>
-            {/* // ))} */}
+            <option value="1">Categorie de L'evenement</option>
+            <option value="2">Management</option>
+            <option value="3">Politique</option>
+            <option value="1">IT</option>
           </select>
         </label>
         <label>
@@ -65,15 +85,30 @@ function CreateForm() {
             required />
 
 
-        </label>     
+        </label>  
+        <label>
+         <h2> Lien De l'evenement: </h2> 
+          <input
+            name="link"
+            type="url"
+
+            onChange={e => setLink(e.target.value)}
+            required />
+
+
+        </label>   
+
+
+
+
         <label>
          <h2> Lien Image: </h2> 
+         <h6>Utiliser ce <a href='https://imgbb.com/'>lien</a> pour creer  un lien pour l'image  </h6>
           <input
             name="image"
             type="url"
 
-            // value={date}
-            // onChange={e => setDate(e.target.value)}
+            onChange={e => setPicture(e.target.value)}
             required />
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import './eventComp.css';
-import { FaFacebook,FaGithub,FaGoogle, FaTwitter } from 'react-icons/fa';
+import { FaFacebook,FaGithub,FaGoogle, FaTwitter,FaChalkboardTeacher,FaCalendarAlt } from 'react-icons/fa';
 
 
 
@@ -10,16 +10,18 @@ function EventComp({data}) {
     return (
         
         <div className='eventSection1'>
-                <h1 style={{textDecoration: 'underline'}}>{data.title}</h1>
+                <h1 style={{ fontSize :'30px'}}> <FaChalkboardTeacher/>          {data.title}</h1>
                 <br
                 ></br>
-                <h2>{data.description}</h2>
+                 <br
+                ></br>
+                <h2> {data.description}</h2>
                 <br
                 ></br>
                 
                 <br
                 ></br>
-                <h4>{data.datevent}</h4>
+                <h4> <FaCalendarAlt/> {data.datevent}</h4>
                 <br
                 ></br>
                <h2>     <FaFacebook/> &nbsp; <FaGoogle/> &nbsp; <FaGithub/> &nbsp; <FaTwitter/>

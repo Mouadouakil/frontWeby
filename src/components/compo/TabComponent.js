@@ -25,28 +25,68 @@ export default function TabComponent() {
   const [currentTab, setCurrentTab] = React.useState(0);
   const [data, setData] = React.useState(null);
   const [def, setDef] = React.useState(null);
-  let result = data;
+  const [result, setResult] = React.useState(null);
+ 
   
   const handleChange = (event, newTab) => {
     setCurrentTab(newTab);
     console.log(newTab);
+    setResult(def);
     console.log(def);
-  
-    console.log(data);
+    console.log(result);
     if(newTab === 2){
+      setData(result.filter((data) => {
+        return data.description.search("of") !== -1;
+        }))
+    }
+    else if(newTab === 3){
       setData(result.filter((data) => {
         return data.datevent.search("22") !== -1;
         }))
-    }else{
-      setData(def);
     }
-  
+    else if(newTab === 4){
+      
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+    }
+    else if(newTab === 5){
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+    }
+    else if(newTab === 6){
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+    }
+    else if(newTab === 7){
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+    }
+    else if(newTab === 8){
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+    }
+    else if(newTab === 1){
+      setData(result.filter((data) => {
+        return data.datevent.search("22") !== -1;
+        }))
+      }
+      else{
+        setData(def);
+      }
+
+
+    console.log(data);
    
 
   };
   const fetchedCategories = [
     {
-      label: "Developpement",
+      label: "Tous",
     },
     {
       label: "Data",
@@ -82,6 +122,9 @@ export default function TabComponent() {
     });
     axios.get(baseURL).then((response) => {
       setDef(response.data);
+    });
+    axios.get(baseURL).then((response) => {
+      setResult(response.data);
     });
   }, []);
 

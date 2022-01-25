@@ -71,7 +71,7 @@ console.log(menuItem)
               </div>
 
 
-              <div className='card-icons'><FaCalendarCheck />   Tanger, {item.datevent}</div>
+              <div className='card-icons'><FaCalendarCheck />   {item.datevent}</div>
             </div>
 
           </div>
