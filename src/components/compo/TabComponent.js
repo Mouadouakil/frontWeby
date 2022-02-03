@@ -36,43 +36,43 @@ export default function TabComponent() {
     console.log(result);
     if(newTab === 2){
       setData(result.filter((data) => {
-        return data.description.search("of") !== -1;
+        return data.description.search("AI") !== -1;
         }))
     }
     else if(newTab === 3){
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("devops") !== -1;
         }))
     }
     else if(newTab === 4){
       
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("design") !== -1;
         }))
     }
     else if(newTab === 5){
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("UI") !== -1;
         }))
     }
     else if(newTab === 6){
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("security") !== -1;
         }))
     }
     else if(newTab === 7){
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("MLOPS") !== -1;
         }))
     }
     else if(newTab === 8){
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("cloud") !== -1;
         }))
     }
     else if(newTab === 1){
       setData(result.filter((data) => {
-        return data.datevent.search("22") !== -1;
+        return data.description.search("DATA") !== -1;
         }))
       }
       else{
@@ -145,7 +145,7 @@ export default function TabComponent() {
   {data.filter(post => {
     if (query === '') {
       return null;
-    } else if (post.title.includes(query)) {
+    } else if (post.description.includes(query)) {
       return post;
     }
   }).map((post, index) => (

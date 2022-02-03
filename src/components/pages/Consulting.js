@@ -23,6 +23,13 @@ export default function Consulting() {
     picture : data.picture})
     .then(function (response) {
       console.log(response);
+      if(response.status === "200"){
+        alert("email et Demende recu")
+
+      }else{
+        alert("Error d envoi verifier la date")
+
+      }
     })
     .catch(function (error) {
       console.log(error);
@@ -76,7 +83,7 @@ export default function Consulting() {
       <select {...register("categorie")} className='inpu'>
         <option value="1">IT</option>
         <option value="2">Management</option>
-        <option value="3">sciences</option>
+        <option value="3">Economie</option>
         <option value="1">Politique</option>
       </select>
 
