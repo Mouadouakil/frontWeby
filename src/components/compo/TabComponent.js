@@ -62,7 +62,7 @@ export default function TabComponent() {
     }
     else if(newTab === 7){
       setData(result.filter((data) => {
-        return data.description.search("MLOPS") !== -1;
+        return data.description.search("mlops") !== -1;
         }))
     }
     else if(newTab === 8){
@@ -72,7 +72,7 @@ export default function TabComponent() {
     }
     else if(newTab === 1){
       setData(result.filter((data) => {
-        return data.description.search("DATA") !== -1;
+        return data.description.search("data") !== -1;
         }))
       }
       else{

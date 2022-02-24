@@ -7,15 +7,24 @@
     align-items: center;
 }
 
-.aboutEvent h1{
+.aboutEvent h4{
     text-align: center;
     width: 100%;
     padding-top: 30px;
+    padding: 30px;
 }
 
-.aboutEvent p{
+.aboutEvent h1{
+    text-align: center;
+    width: 100%;
+    
+    padding: 30px;
+}
+
+.aboutEvent h5{
     width: 80%;
-    padding:30px;
+    padding: 30px;
+   
     line-height: 1.5;
     font-size: 30px;
 }

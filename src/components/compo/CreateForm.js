@@ -1,7 +1,7 @@
 import React from 'react'
 import './createForm.css'
 import axios from 'axios';
-
+ 
 function CreateForm() {
     const [titre, setTitre] = React.useState("");
     const [desc, setDesc] = React.useState("");
@@ -9,7 +9,7 @@ function CreateForm() {
     const [date, setDate] = React.useState("");
     const [link, setLink] = React.useState("");
     const [picture, setPicture] = React.useState("");
-    const baseURL = "http://localhost:5030/Events";
+    const baseURL = "http://localhost:5030/Events/admin";
     const data = {
       title: titre,
       description : desc,
@@ -29,6 +29,12 @@ function CreateForm() {
         picture : data.picture})
         .then(function (response) {
           console.log(response);
+          if(response.status === "200"){
+            alert("valide")
+
+          }else{
+            alert("request nest pas valide")
+          }
         })
         .catch(function (error) {
           console.log(error);
@@ -73,6 +79,7 @@ function CreateForm() {
             <option value="2">Management</option>
             <option value="3">Politique</option>
             <option value="1">IT</option>
+            <option value="4">Politique</option>
           </select>
         </label>
         <label>

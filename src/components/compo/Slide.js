@@ -64,8 +64,7 @@ console.log(menuItem)
               <div className="slide-container-item">
                 <div className='img-section-container'><div className='img-section' style={{ backgroundImage: `url(${item.picture})` }}></div> </div>
                 <Link to={`/event/${item.id}`} key={item.id}><h2>{item.title}</h2></Link>
-                <p>{item.description} Partagez votre caméra, créez des sondages et des enquêtes, posez et répondez
-                Partagez votre caméra, créez des sondages et des enquêtes, posez et répondez
+                <p>{item.description} 
                 </p>
 
               </div>

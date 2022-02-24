@@ -9,7 +9,11 @@ import ContactUs from './components/pages/ContactUs';
 import SignUp from './components/pages/SignUp';
 import Event from './components/pages/Event';
 import Consulting from './components/pages/Consulting';
-
+import AjoutEvent from './ajoutEvent.js';
+import AjoutCategorie from './ajoutCategorie';
+import Demandes from './demandes.js'
+import panel from './panel.js';
+import Evenemnets from './evenements';
 function App() {
   return (
     <Router>
@@ -22,6 +26,12 @@ function App() {
         <Route path='/sign-up' component={SignUp} />
         <Route path='/event/:id' component={Event} />
         <Route path='/consulting' component={Consulting} />
+        <Route path='/panel' component={panel} />
+        <Route path='/pages/widgets' component={AjoutEvent} />
+        <Route path='/Categories' component={AjoutCategorie} />
+        <Route path='/demandes' component={Demandes} />
+        <Route path='/evenements' component={Evenemnets} />
+        
       </Switch>
     </Router>
   );

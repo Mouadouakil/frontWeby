@@ -19,7 +19,7 @@ const Container = (props) => {
     return (
       <>
 
-       <h1><Link to="/services"> Votre Dashboard </Link></h1> 
+       <h1><Link to="/panel"> Votre Dashboard </Link></h1> 
 
         <Text>{user.email}</Text>
         <Button block onClick={() => props.supabaseClient.auth.signOut()}>

@@ -19,13 +19,12 @@ export default function ImgMediaCard({data}) {
       <CardContent>
       
         <Typography variant="body2" color="text.secondary">
-          <h2>{data.title}</h2><br></br>
-          <h5>{data.description} Panoplie d’engagement diversifiée
-            Partagez votre caméra, créez des sondages et des enquêtes, posez et répondez aux questions en direct ou dessinez </h5>
+          <h4>{data.title}</h4><br></br>
+          <p>{data.description}  </p>
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"><h3><Link to={`/event/${data.id}`} key={data.id} style={{ textDecoration: 'none' }}>Voir Plus</Link></h3></Button>
+        <Button size="small"><p><Link to={`/event/${data.id}`} key={data.id} style={{ textDecoration: 'none' }}>Voir Plus</Link></p></Button>
       </CardActions>
     </Card>
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import './EventTable.css'
 import axios from "axios";
 import {FaListUl} from 'react-icons/fa';
@@ -38,6 +38,15 @@ function EventTable() {
         
       });
     }
+    function methodName2(params) {
+      const baseURL4 = "http://localhost:5030/Events/delete?term="+params;
+
+      axios.get(baseURL4).then((response) => {
+        console.log(response.data);
+        
+      });
+    }
+
 
     return (
         <div className="container">
@@ -77,9 +86,11 @@ function EventTable() {
                   class="btn btn-outline-primary mr-2"  >
                   Accepte
                 </a>
-                <Link class="btn btn-danger" >
+                <a href="/services"
+                onClick = {() => { methodName2(item.id);} }
+                  class="btn btn-outline-primary mr-2"  >
                   Refuse
-                </Link>
+                </a>
               </td>
 
 

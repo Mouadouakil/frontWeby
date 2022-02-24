@@ -1,4 +1,4 @@
-.navbar {
+.navbar-c {
   background: white;
   height: 100px;
   display: flex;
@@ -23,7 +23,7 @@
   font-size: 1.6rem;
 }
 
-.nav-menu {
+.navbar-c .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
@@ -34,16 +34,18 @@
   margin-right: 2rem;
 }
 
-.nav-item {
+.navbar-c .nav-item {
   display: flex;
   align-items: center;
   height: 80px;
 }
 
-.nav-links {
+.navbar-c .nav-links {
   color: rgb(59, 49, 49);
   text-decoration: none;
+  
   padding: 0.5rem 1rem;
+  padding-top: 1.5rem;
 }
 
 .nav-links:hover {
@@ -56,15 +58,15 @@
   color: rgb(48, 35, 35);
 }
 
-.nav-links-mobile {
+.navbar-c .nav-links-mobile {
   display: none;
 }
 
-.menu-icon {
+.navbar-c .menu-icon {
   display: none;
 }
 
-.navbar img{
+.navbar-c img{
    padding-top: 30px;
     width: 200px;
     height: 200px;
@@ -109,7 +111,7 @@
 
   }
 
-  .navbar-logo {
+  .navbar-c .navbar-logo {
     position: absolute;
     top: 0;
     left: 0;

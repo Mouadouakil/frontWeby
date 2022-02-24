@@ -10,18 +10,18 @@ function EventComp({data}) {
     return (
         
         <div className='eventSection1'>
-                <h1 style={{ fontSize :'40px'}}> <FaChalkboardTeacher/>          {data.title}</h1>
+                <h4 style={{ fontSize :'40px'}}> <FaChalkboardTeacher/>          {data.title}</h4>
                 <br
                 ></br>
                  <br
                 ></br>
-                {/* <h2> {data.description}</h2> */}
+                {/* <h6> {data.description}</h6> */}
                
-                <h1> <FaCalendarAlt/> {data.datevent}</h1>
+                <h4> <FaCalendarAlt/> {data.datevent}</h4>
                 <br
                 ></br>
-               <h1>     <FaFacebook/> &nbsp; <FaGoogle/> &nbsp; <FaGithub/> &nbsp; <FaTwitter/>
-</h1> 
+               <h4>     <FaFacebook/> &nbsp; <FaGoogle/> &nbsp; <FaGithub/> &nbsp; <FaTwitter/>
+</h4> 
 <br
                 ></br>
 
@@ -29,7 +29,7 @@ function EventComp({data}) {
 
         {data.categorie === 2 &&
             
-            <h1>Categorie : Management</h1>
+            <h4>Categorie : Management</h4>
             
           }
            {data.categorie === 1 &&

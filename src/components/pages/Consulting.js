@@ -52,31 +52,30 @@ export default function Consulting() {
     <>
 
       
-
+    <div className='ajout'></div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
      
 
-        <h1>  Ajouter Votre Evenement : </h1>
-        <br></br>
-        <br></br>
-        <br></br>
-      <label>Email</label>
+        <h2>  </h2>
+  
+        
+      <label>Email : </label>
       <input {...register("email", { required: true })} className='inpu' type="Email"/>
 
-      <label>Nom D'Evenement</label>
+      <label>Titre :</label>
       <input {...register("event", { required: true })} className='inpu'/>
 
-      <label>description</label>
+      <label>Description : </label>
       <input {...register("description", { required: true })} className='desc' type="textarea"/>
 
       <label>Nom de Conferencier</label>
       <input {...register("speaker", { required: true })} className='inpu' />
       
-      <label>Ville, Region , Date</label>
+      <label>Date : </label>
       <input {...register("date", { required: true })} className='inpu' type="Date"/>
 
-      <label>Lien  GoogleMeet ou Zoom Par exemple</label>
+      <label>Lien  (GoogleMeet/Zoom)</label>
       <input {...register("Lien", { required: true })} className='inpu'/>
 
       <label>Categorie</label>
@@ -87,7 +86,7 @@ export default function Consulting() {
         <option value="1">Politique</option>
       </select>
 
-      <label>Lien D'image <h6>utiliser ce <a href='https://imgbb.com/'>lien</a> pour creer  un lien pour l'image  </h6></label>
+      <label>Annonce <h6>utiliser ce <a href='https://imgbb.com/'>lien</a> pour creer  un lien pour l'image  </h6></label>
       <input {...register("picture", { required: true })} className='inpu'/>
 
       {errors.exampleRequired && <span>This field is required</span>}

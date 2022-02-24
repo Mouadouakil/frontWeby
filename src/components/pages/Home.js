@@ -39,7 +39,7 @@ export default function Home() {
     var filteredData = null;
 
     if(button === 'All'){
-      filteredData = menuItem.filter(item => item.categorie ===  1 || item.categorie ===  2 || item.categorie ===  3 );
+      filteredData = menuItem.filter(item => item.categorie ===  1 || item.categorie ===  2 || item.categorie ===  3 || item.categorie ===  4);
     }
 
    if(button === 'IT'){
@@ -52,7 +52,7 @@ export default function Home() {
      filteredData = menuItem.filter(item => item.categorie ===  3);
     }
     if(button === 'Politique'){
-     filteredData = menuItem.filter(item => item.categorie ===  1);
+     filteredData = menuItem.filter(item => item.categorie ===  4);
     }
     
     
